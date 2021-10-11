@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">TimeMachine</string>
+  <string name="startButtonDefaultText">Start</string>
+  <string name="stopButtonDefaultText">Stop</string>
+</resources>
