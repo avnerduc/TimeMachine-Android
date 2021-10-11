@@ -10,25 +10,13 @@ import java.time.Instant;
 
 public class MainActivity extends AppCompatActivity {
 
-  Chronometer stopwatch;
-  long startTime, endTime;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
   }
 
-  public void start(View view) {
-    startTime = SystemClock.elapsedRealtime();
-    stopwatch.start();
-  }
 
-  public void stop(View view) {
-    endTime = SystemClock.elapsedRealtime();
-    stopwatch.stop();
-
-  }
 
 }
