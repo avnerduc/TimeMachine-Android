@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.LinkedList;
 import java.util.List;
 
+
 public class Session {
 
   private SubSession currentSub;
@@ -16,7 +17,7 @@ public class Session {
   }
 
   public void start() throws IllegalStateException  {
-    if (currentSub == null){
+    if (currentSub != null) {
       throw new IllegalStateException ("There's already a running session!");
     }
     currentSub = new SubSession();
@@ -26,8 +27,8 @@ public class Session {
   //  public void pause();
   //  public void resume();
 
-  public void stop() throws IllegalStateException  {
-    if (currentSub == null){
+  public void stop() throws IllegalStateException {
+    if (currentSub == null) {
       throw new IllegalStateException ("There's no running session to pause!");
     }
     currentSub.stop();
@@ -53,5 +54,4 @@ public class Session {
   private Duration currentPlusTotalDuration(){
     return totalFinishedDuration.plus(currentSub.getDuration());
   }
-
 }
